@@ -46,7 +46,7 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll active" href="index.php?c=WebPage&a=homeUser">INICIO</a>
+                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=homeUser">INICIO</a>
                             </li>
 
                             <li class="nav-item">
@@ -54,7 +54,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=productsUser">PRODUCTOS</a>
+                                <a class="nav-link click-scroll active" href="index.php?c=WebPage&a=productsUser">PRODUCTOS</a>
                             </li>
 
                             <!--<li class="nav-item">

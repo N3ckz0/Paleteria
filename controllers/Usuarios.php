@@ -65,6 +65,7 @@
 			}
 
 		}
+
 		/*Modifica Perfil Administrador*/
 		public function perfil_admin(){
 			$user = new Usuarios_model();
@@ -83,7 +84,23 @@
 			require_once "views/admin/perfil.php";
 		}
 
+		/*Modifica Perfil Usuario*/
+		public function perfil_usuario(){
+			$user = new Usuarios_model();
 
+			$id = $_POST['bb-id'];
+			$nombre = $_POST['bb-name'];
+			$apellidos = $_POST['bb-apellido'];
+			$telefono = $_POST['bb-phone'];
+			$fecha_nac = $_POST['bb-date'];
+			$usuario = $_POST['bb-user'];
+			$correo = $_POST['bb-correo'];
+			$contrasena = $_POST['bb-password'];
+			/*$newtel =str_replace('-','',$telefono);*/
+
+			$user->modify($id,$nombre,$apellidos,$telefono,$fecha_nac,$usuario,$correo,$contrasena,'user');
+			require_once "views/user/perfil.php";
+		}
 
 
 	}

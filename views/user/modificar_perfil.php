@@ -46,15 +46,15 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=homeUser">INICIO</a>
+                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=home">INICIO</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll active" href="index.php?c=WebPage&a=perfilUser">PERFIL</a>
+                                <a class="nav-link click-scroll active" href="index.php?c=WebPage&a=perfil">PERFIL</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=productsUser">PRODUCTOS</a>
+                                <a class="nav-link click-scroll" href="index.php?c=WebPage&a=products">PRODUCTOS</a>
                             </li>
 
                             <!--<li class="nav-item">
@@ -76,42 +76,47 @@
 
                                 <div class="col-lg-12 col-12 mx-auto">
                                     <div class="mt-5 pb-3 mb-5">
-                                        <form action="#" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
+                                        <form action="index.php?c=usuarios&a=perfil_usuario" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
                                             <div class="text-center mb-5">
                                                 <h2 class="mb-1">Modificar usuario</h2>
                                             </div>
 
                                             <div class="booking-form-body">
                                                 <div class="row">
-
+                                                        <input type="hidden" name="bb-id" id="bb-id" class="form-control" value="<?php echo $_SESSION['Usuario']['id']?>">
                                                     <div class="col-lg-6 col-12">
                                                         <label for="bb-name">Nombre</label>
-                                                        <input type="text" name="bb-name" id="bb-name" class="form-control" placeholder="<?php echo $_SESSION['Usuario']['nombre']?>" required>
+                                                        <input type="text" name="bb-name" id="bb-name" class="form-control" value="<?php echo $_SESSION['Usuario']['nombre']?>" required>
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
                                                         <label for="bb-apellido">Apellido</label>
-                                                        <input type="text" name="bb-apellido" id="bb-apellido" class="form-control" placeholder="<?php echo $_SESSION['Usuario']['apellidos'] ?>" required>
+                                                        <input type="text" name="bb-apellido" id="bb-apellido" class="form-control" value="<?php echo $_SESSION['Usuario']['apellidos'] ?>" required>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-12">
+                                                        <label for="bb-user">Usuario</label>
+                                                        <input type="text" name="bb-user" id="bb-user" class="form-control" value="<?php echo $_SESSION['Usuario']['usuario'] ?>" required>
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
                                                         <label for="bb-phone">Telefono</label>
-                                                        <input type="tel" class="form-control" name="bb-phone" placeholder="<?php echo $_SESSION['Usuario']['telefono'] ?>" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="">
+                                                        <input type="tel" class="form-control" name="bb-phone" value="<?php echo $_SESSION['Usuario']['telefono'] ?>" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required="">
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
                                                         <label for="bb-correo">Correo</label>
-                                                        <input type="mail" name="bb-correo" id="bb-correo" class="form-control" placeholder="<?php echo $_SESSION['Usuario']['correo']?>" required>
+                                                        <input type="mail" name="bb-correo" id="bb-correo" class="form-control" value="<?php echo $_SESSION['Usuario']['correo']?>" required>
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
                                                         <label for="bb-date">Fecha de nacimiento</label>
-                                                        <input type="text" name="bb-date" id="bb-date" class="form-control" placeholder="<?php echo $_SESSION['Usuario']['fecha_nac'] ?>" required>
+                                                        <input type="text" name="bb-date" id="bb-date" class="form-control" value="<?php echo $_SESSION['Usuario']['fecha_nac'] ?>" required>
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
-                                                        <label for="bb-token">Token</label>
-                                                        <input type="text" name="bb-token" id="bb-token" class="form-control" placeholder="<?php echo $_SESSION['token'] ?>" required>
+                                                        <label for="bb-password">Contraseña</label>
+                                                        <input type="password" name="bb-password" id="bb-password" class="form-control" required>
                                                     </div>
                                                 </div>
 
