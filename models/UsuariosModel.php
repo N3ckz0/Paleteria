@@ -40,9 +40,9 @@
 
 		}
 
-		public function modify($id, $nombre, $apellido, $usuario, $correo, $contrasena, $noCuenta, $rol){
+		public function modify($id, $nombre, $apellidos, $telefono, $fecha_nac, $usuario,$correo,$contrasena,$rol){
 
-			$resultado = $this->db->query("UPDATE usuarios SET nombre='$nombre', apellido='$apellido', usuario='$usuario', correo='$correo', contrasena='$contrasena', noCuenta='$noCuenta', rol='$rol' WHERE id = '$id'");
+			$resultado = $this->db->query("UPDATE usuarios SET nombre='$nombre', apellidos='$apellidos', telefono='$telefono', fecha_nac='$fecha_nac', usuario='$usuario', correo='$correo', contrasena='$contrasena', rol='$rol' WHERE id = '$id'");
 		}
 
 		public function delete($id){

@@ -74,7 +74,7 @@
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">
-                                                        <input type="tel" class="form-control" name="bb-phone" placeholder="Telefono 22-29-16-68-94" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                                        <input type="tel" class="form-control" name="bb-phone" placeholder="Telefono 22-29-16-68-94" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                                                     </div>
 
                                                     <div class="col-lg-6 col-12">

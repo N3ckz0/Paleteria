@@ -6,11 +6,6 @@
 	class WebPageController
 	{
 
-		function __construct()
-		{
-			require_once "models/WebPageModel.php";
-		}
-
 		public function index(){
 			require_once "views/pagina/index.php";
 		}

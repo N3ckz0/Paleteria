@@ -6,6 +6,7 @@
 			require_once "models/UsuariosModel.php";
 		}
 
+		/*Login*/
 		public function verifLogin(){
 			session_start();
 			$user = new Usuarios_model();
@@ -54,19 +55,32 @@
 			$correo = $_POST['bb-correo'];
 			$contrasena = $_POST['bb-password'];
 			$verifica_c = $_POST['bb-vpassword'];
-			$newtel =str_replace('-','',$telefono);
+			/*$newtel =str_replace('-','',$telefono);*/
 
 			if($contrasena == $verifica_c){
-				$usuarios->insert($nombre,$apellidos,$newtel,$fecha_nac,$usuario,$correo,$contrasena,'user');
+				$usuarios->insert($nombre,$apellidos,$telefono,$fecha_nac,$usuario,$correo,$contrasena,'user');
 				require_once "views/pagina/index.php";
 			}else{
 				require_once "views/errores/contrasena_diferente.php";
 			}
 
 		}
+		/*Modifica Perfil Administrador*/
+		public function perfil_admin(){
+			$user = new Usuarios_model();
 
-		public function session_user(){
-			require_once "views/user/home.php";
+			$id = $_POST['bb-id'];
+			$nombre = $_POST['bb-name'];
+			$apellidos = $_POST['bb-apellido'];
+			$telefono = $_POST['bb-phone'];
+			$fecha_nac = $_POST['bb-date'];
+			$usuario = $_POST['bb-user'];
+			$correo = $_POST['bb-correo'];
+			$contrasena = $_POST['bb-password'];
+			/*$newtel =str_replace('-','',$telefono);*/
+
+			$user->modify($id,$nombre,$apellidos,$telefono,$fecha_nac,$usuario,$correo,$contrasena,'admin');
+			require_once "views/admin/perfil.php";
 		}
 
 

@@ -81,7 +81,7 @@
                                         <div class="row">
                                             <div class="col-md-6 mt-3 mb-3">
                                                 <div class="col-lg-10 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
-                                                    <img src="assets/images/barber/portrait-male-hairdresser-with-scissors.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                                                    <img src="assets/images/barber/epifanio.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
