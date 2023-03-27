@@ -1,0 +1,18 @@
+create database paletas;
+use paletas;
+
+create table usuarios(
+	id int primary key auto_increment,
+	nombre varchar(25),
+	apellidos varchar(50),
+	telefono varchar(10),
+	fecha_nac date,
+	usuario varchar(25),
+	correo varchar(50),
+	contrasena varchar(25),
+	rol varchar(25)
+);
+
+INSERT INTO `paletas`.`usuarios` (`nombre`, `apellidos`, `telefono`, `fecha_nac`, `usuario`,`correo`,`contrasena`,`rol`) VALUES ('Eduardo', 'Cortes', '2222222222', '2023-03-21', 'lalo','lalo@test.com','admin','admin');
+
+INSERT INTO `paletas`.`usuarios` (`nombre`, `apellidos`, `telefono`, `fecha_nac`, `usuario`,`correo`,`contrasena`,`rol`) VALUES ('Gerardo', 'Perez', '2222222222', '2023-03-21', 'gera','gera@test.com','admin','user');
