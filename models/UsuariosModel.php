@@ -11,14 +11,14 @@
 		}
 
 		public function login($user,$password){
-			$sql = "SELECT * FROM usuarios WHERE usuario = '$user' AND contrasena = '$password'";
+			$sql = "SELECT * FROM usuarios WHERE usuario = '$user' AND contrasena = '$password' LIMIT 1";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 			return $row;
 		}
 
 		public function login_mail($mail,$password){
-			$sql = "SELECT * FROM usuarios WHERE correo = '$mail' AND contrasena = '$password'";
+			$sql = "SELECT * FROM usuarios WHERE correo = '$mail' AND contrasena = '$password' LIMIT 1";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 			return $row;
@@ -54,6 +54,14 @@
 		public function get_user($id)
 		{
 			$sql = "SELECT * FROM usuarios WHERE id='$id' LIMIT 1";
+			$resultado = $this->db->query($sql);
+			$row = $resultado->fetch_assoc();
+
+			return $row;
+		}
+
+		public function existeCorreo($correo){
+			$sql = "SELECT correo FROM usuarios WHERE correo = '$correo' LIMIT 1";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 

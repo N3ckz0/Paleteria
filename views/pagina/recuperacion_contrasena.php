@@ -54,7 +54,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 col-12 mx-auto">
-                                    <form action="index.php?c=usuarios&a=verifLogin" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
+                                    <form action="index.php?c=usuarios&a=recupera" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
                                         <div class="text-center mb-5">
                                             <h2 class="mb-1">Recuperacion de contraseña</h2>
                                             <p>Por favor ingresa un correo al que podamos mandar tu nueva contraseña</p>
@@ -63,7 +63,7 @@
                                             <div class="row">
 
                                                 <div class="col-lg-6 col-12">
-                                                    <input type="mail" name="bb-user" id="bb-user" class="form-control" placeholder="example@test.com" required>
+                                                    <input type="mail" name="bb-correo" id="bb-correo" class="form-control" placeholder="example@test.com" required>
                                                 </div>
 
                                                 <div class="col-lg-4 col-md-10 col-8 mx-auto">

@@ -102,6 +102,17 @@
 			require_once "views/user/perfil.php";
 		}
 
+		public function recupera(){
+			$user = new Usuarios_model();
+			$correo = $_POST['bb-correo'];
+			$exist = $user->existeCorreo($correo);
+
+			if($exist == null || $exist == ''){
+				require_once "views/errores/correo_inexistente.php";
+			}else{
+				require_once "views/pagina/correo_enviado.php";
+			}
+		}
 
 	}
 ?>
