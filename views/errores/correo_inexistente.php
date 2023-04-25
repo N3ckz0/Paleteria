@@ -66,13 +66,15 @@
                                                     <input type="mail" name="bb-correo" id="bb-correo" class="form-control" placeholder="example@test.com" required>
                                                 </div>
 
+                                                <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                                    <button type="submit" class="form-control">Iniciar Sesion</button>
+                                                </div>
+
                                                 <div class="col-12 d-flex justify-content-center align-items-center">
                                                     <p style="color:red; background:#CACFD2; padding:15px; border-radius:15px;">El correo ingresado no existe.</p>
                                                 </div>
 
-                                                <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                                    <button type="submit" class="form-control">Iniciar Sesion</button>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </form>
